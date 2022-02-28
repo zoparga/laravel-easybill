@@ -190,7 +190,7 @@ class easybill
 
     public function getJPG($id)
     {
-        return $this->request->get('documents/' . $id . '/jgp');
+        return $this->request->get('documents/' . $id . '/jpg');
     }
 
     /**
