@@ -110,6 +110,18 @@ class easybill
     }
 
     /**
+     * @param null $attributes
+     *
+     * @return $this
+     */
+    public function createAndSaveDocument($attributes = null)
+    {
+        $this->document = $this->request->post('documents', ['form_params' => $attributes]);
+
+        return $this->document;
+    }
+
+    /**
      * @return mixed
      */
     public function done()
