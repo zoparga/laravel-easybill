@@ -185,7 +185,7 @@ class easybill
      */
     public function getPDF($id)
     {
-        return $this->request->get('documents/' . $id . '/pdf');
+        return $this->request->get('documents/' . $id . '/pdf', 'accept: application/pdf');
     }
 
     public function getJPG($id)
