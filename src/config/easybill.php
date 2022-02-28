@@ -4,7 +4,7 @@ return [
 
     /*
     |----------------------------------------------------------------------------
-    | Easybill REST API Key
+    | EasyBill REST API Key
     |----------------------------------------------------------------------------
     |
     | This value is required to use the easybill.de REST API and perform actions

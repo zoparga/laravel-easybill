@@ -1,6 +1,6 @@
 <?php
 
-namespace DivDax\Easybill\Http;
+namespace zoparga\EasyBill\Http;
 
 use GuzzleHttp\Client;
 use Psr\Http\Message\ResponseInterface;

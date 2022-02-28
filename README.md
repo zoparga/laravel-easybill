@@ -1,9 +1,9 @@
 # easybill.de REST API v1
 
-[![Latest Stable Version](https://poser.pugx.org/divdax/easybill/v/stable?format=flat-square)](https://packagist.org/packages/divdax/easybill)
-[![Total Downloads](https://poser.pugx.org/divdax/easybill/downloads?format=flat-square)](https://packagist.org/packages/divdax/easybill)
+[![Latest Stable Version](https://poser.pugx.org/zoparga/easybill/v/stable?format=flat-square)](https://packagist.org/packages/zoparga/easybill)
+[![Total Downloads](https://poser.pugx.org/zoparga/easybill/downloads?format=flat-square)](https://packagist.org/packages/zoparga/easybill)
 [![StyleCI](https://github.styleci.io/repos/90948270/shield?branch=master)](https://github.styleci.io/repos/90948270)
-[![License](https://poser.pugx.org/divdax/easybill/license?format=flat-square)](https://packagist.org/packages/divdax/easybill)
+[![License](https://poser.pugx.org/zoparga/easybill/license?format=flat-square)](https://packagist.org/packages/zoparga/easybill)
 
 **Unofficial** Laravel Package to use the [easybill.de REST API](https://www.easybill.de/api).
 
@@ -12,7 +12,7 @@ This Laravel Package is a very basic and untested version!
 ## Installation
 
 ```
-composer require divdax/easybill
+composer require zoparga/easybill
 ```
 
 ## Laravel 5.5+
@@ -26,12 +26,12 @@ Add the ServiceProvider and Facade in ```config/app.php```
 ```php
 'providers' => [
     ...
-    DivDax\Easybill\EasybillServiceProvider::class,
+    zoparga\EasyBill\EasybillServiceProvider::class,
 ];
 
 'aliases' => [
     ...
-    'Easybill' => DivDax\Easybill\Facade\Easybill::class,
+    'EasyBill' => zoparga\EasyBill\Facade\EasyBill::class,
 ];
 ```
 
@@ -49,12 +49,12 @@ I only implemented some basic api calls
 
 ```php
 // Search Customer with exact match
-Easybill::searchCustomer([
+EasyBill::searchCustomer([
     'company_name' => 'Company Name'
 ]);
 
 // Create Customer
-$customer = Easybill::createCustomer([
+$customer = EasyBill::createCustomer([
     'company_name' => 'Musterfirma GmbH',
     'first_name' => 'Max',
     'last_name' => 'Muster',
@@ -65,10 +65,10 @@ $customer = Easybill::createCustomer([
 ]);
 
 // Delete Customer
-Easybill::deleteCustomer($customer->id);
+EasyBill::deleteCustomer($customer->id);
 
 // Create Document (Invoice)
-$doc = Easybill::createDocument([
+$doc = EasyBill::createDocument([
     'type' => 'INVOICE',
     'title' => 'Titel',
     //'customer_id' => 0,
@@ -100,8 +100,11 @@ $doc = Easybill::createDocument([
 // Finish Document (set auto created document number)
 $doc->done();
 
+
+$pdf = EasyBill::getPDF($pdfID);
+
 // Update Document
-Easybill::updateDocument($id, ['status' => 'DONE']);
+EasyBill::updateDocument($id, ['status' => 'DONE']);
 ```
 
 ## Contributing

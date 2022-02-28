@@ -1,24 +1,22 @@
 {
-  "name": "divdax/easybill",
+  "name": "zoparga/easybill",
   "description": "Laravel Package to use the easybill.de REST API",
   "keywords": ["laravel", "package", "easybill", "REST", "API"],
   "type": "package",
   "license": "MIT",
   "support": {
-    "issues": "https://github.com/divdax/easybill/issues",
-    "source": "https://github.com/divdax/easybill"
+    "issues": "https://github.com/zoparga/laravel-easybill/issues",
+    "source": "https://github.com/zoparga/laravel-easybill"
   },
   "authors": [
     {
-      "name": "Heiko Klingele",
-      "email": "divdax@gmail.com",
-      "homepage": "http://heikoklingele.de",
-      "role": "Photographer, Developer"
+      "name": "Papp Zoltán",
+      "email": "zoltan@pappz.hu"
     }
   ],
   "autoload": {
     "psr-4": {
-      "DivDax\\Easybill\\": "src/"
+      "zoparga\\EasyBill\\": "src/"
     }
   },
   "require": {
@@ -31,10 +29,10 @@
   "extra": {
     "laravel": {
       "providers": [
-        "DivDax\\Easybill\\EasybillServiceProvider"
+        "zoparga\\EasyBill\\EasybillServiceProvider"
       ],
       "aliases": {
-        "Easybill": "DivDax\\Easybill\\Facade\\Easybill"
+        "EasyBill": "zoparga\\EasyBill\\Facade\\EasyBill"
       }
     }
   },

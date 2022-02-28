@@ -1,10 +1,10 @@
 <?php
 
-namespace DivDax\Easybill\Facade;
+namespace zoparga\EasyBill\Facade;
 
 use Illuminate\Support\Facades\Facade;
 
-class Easybill extends Facade
+class EasyBill extends Facade
 {
     protected static function getFacadeAccessor()
     {

@@ -1,6 +1,6 @@
 <?php
 
-namespace DivDax\Easybill;
+namespace zoparga\EasyBill;
 
 use Illuminate\Support\ServiceProvider;
 

@@ -1,8 +1,8 @@
 <?php
 
-namespace DivDax\Easybill;
+namespace zoparga\EasyBill;
 
-use DivDax\Easybill\Http\Request;
+use zoparga\EasyBill\Http\Request;
 
 /**
  * easybill.de API-Documentation:
