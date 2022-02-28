@@ -188,6 +188,11 @@ class easybill
         return $this->request->get('documents/' . $id . '/pdf');
     }
 
+    public function getJPG($id)
+    {
+        return $this->request->get('documents/' . $id . '/jgp');
+    }
+
     /**
      * @param array $parameters
      *
