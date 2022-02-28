@@ -102,7 +102,7 @@ $doc->done();
 
 
 $pdf = EasyBill::getPDF($pdfID);
-$resultPdf = $pdf->->getBody();
+$resultPdf = $pdf->getBody();
 
 // Update Document
 EasyBill::updateDocument($id, ['status' => 'DONE']);
