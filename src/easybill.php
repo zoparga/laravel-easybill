@@ -132,6 +132,14 @@ class easybill
     /**
      * @return mixed
      */
+    public function finalizeDocument($id)
+    {
+        return $this->request->put('documents/' . $id . '/done');
+    }
+
+    /**
+     * @return mixed
+     */
     public function cancel()
     {
         return $this->request->post('documents/' . $this->document->id . '/cancel');
