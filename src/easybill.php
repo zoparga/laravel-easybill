@@ -132,9 +132,9 @@ class easybill
     /**
      * @return mixed
      */
-    public function finalizeDocument($id)
+    public function finalizeDocument($documentId)
     {
-        return $this->request->put('documents/' . $id . '/done');
+        return $this->request->put('documents/' . $documentId . '/done');
     }
 
     /**
