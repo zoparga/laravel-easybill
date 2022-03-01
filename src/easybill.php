@@ -134,6 +134,7 @@ class easybill
      */
     public function finalizeDocument($documentId)
     {
+        //dd('documents/' . $documentId . '/done');
         return $this->request->put('documents/' . $documentId . '/done');
     }
 
