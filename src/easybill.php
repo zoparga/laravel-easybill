@@ -12,7 +12,7 @@ use zoparga\EasyBill\Http\Request;
  * JSON API-Description:
  * @see https://api.easybill.de/rest/v1/swagger.json
  */
-class easybill
+class Easybill
 {
     public $api_endpoint = 'https://api.easybill.de/rest/v1/';
 

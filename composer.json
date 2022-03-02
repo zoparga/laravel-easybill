@@ -21,19 +21,29 @@
   },
   "require": {
     "illuminate/support": "~5.5.0|~5.6.0|~5.7.0|~5.8.0|^6.0|^7.0|^8.0",
-    "guzzlehttp/guzzle": "^6.2|^7.0"
+    "guzzlehttp/guzzle": "^6.2|^7.0",
+    "spatie/laravel-package-tools": "^1.9.2",
+    "illuminate/contracts": "^8.73"
   },
+  "require-dev": {
+    "nunomaduro/collision": "^5.10",
+    "orchestra/testbench": "^6.22",
+    "pestphp/pest": "^1.21",
+    "pestphp/pest-plugin-laravel": "^1.1",
+    "phpunit/phpunit": "^9.5",
+    "spatie/laravel-ray": "^1.26"
+},
   "config": {
     "sort-packages": true
   },
   "extra": {
     "laravel": {
-      "providers": [
-        "zoparga\\EasyBill\\EasybillServiceProvider"
-      ],
-      "aliases": {
-        "EasyBill": "zoparga\\EasyBill\\Facade\\EasyBill"
-      }
+        "providers": [
+            "zoparga\\EasyBill\\EasyBillServiceProvider"
+        ],
+        "aliases": {
+            "EasyBill": "zoparga\\EasyBill\\Facades\\EasyBill"
+        }
     }
   },
   "minimum-stability": "dev",

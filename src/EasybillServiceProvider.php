@@ -17,12 +17,12 @@ class EasybillServiceProvider extends ServiceProvider
 
     public function register()
     {
-        $this->app->singleton('easybill', function () {
+        $this->app->bind('easybill', function ($app) {
             if (config('easybill.api_key') === null) {
                 throw new \Exception('Missing easybill.de API-Key in config!');
             }
 
-            return new easybill(config('easybill.api_key'));
+            return new EasyBill(config('easybill.api_key'));
         });
 
         $this->mergeConfigFrom(__DIR__ . '/config/easybill.php', 'easybill');
