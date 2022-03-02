@@ -4,7 +4,7 @@ namespace zoparga\EasyBill;
 
 use Illuminate\Support\ServiceProvider;
 
-class EasybillServiceProvider extends ServiceProvider
+class EasyBillServiceProvider extends ServiceProvider
 {
     public function boot()
     {
@@ -17,7 +17,7 @@ class EasybillServiceProvider extends ServiceProvider
 
     public function register()
     {
-        $this->app->singleton('easybill', function ($app) {
+        $this->app->singleton('easybill', function () {
             if (config('easybill.api_key') === null) {
                 throw new \Exception('Missing easybill.de API-Key in config!');
             }
